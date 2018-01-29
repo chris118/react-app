@@ -12,7 +12,8 @@ import EssayForm from './EssayForm';
 import FlavorForm from './FlavorForm';
 import Reservation from './Reservation';
 import Calculator from './Calculator';
-
+import SignUpDialog from './SignUpDialog';
+import FilterTable from './FilterTable/FilterTable';
 
 class App extends Component {
   render() {
@@ -36,6 +37,8 @@ class App extends Component {
          <FlavorForm />
          <Reservation />
          <Calculator />
+         <SignUpDialog />
+         <FilterTable />
       </div>
     );
   }
