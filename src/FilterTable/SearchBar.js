@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyleForm = styled.form`
 	background: red;
+	padding: 10px;
+	margin: 20px;
+`;
+
+const StyleInput = styled.input`
+	box-sizing:border-box;
 	width: 100%;
-	height: 100px;
-	margin: 10px;
 `;
 
 class SearchBar extends React.Component {
@@ -15,19 +19,9 @@ class SearchBar extends React.Component {
 	render() {
 		return (
 			<StyleForm>
-				<table align="center">
-					<tr>
-						<td>
-							<input type="text" placeholder="search..."/><br/>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input id="showstock" type="checkbox"/>
-							<label for="showsock">Only show products in stock</label>
-						</td>
-					</tr>
-				</table>
+				<StyleInput type="text" placeholder="search..."/><br/>
+				<input id="showstock" type="checkbox"/>
+				<label >Only show products in stock</label>
 			</StyleForm>
 		);
 	}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TemperatureInput from './TemperatureInput';
 
 function tryConvert(temperature, convert) {
