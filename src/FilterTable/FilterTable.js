@@ -25,12 +25,27 @@ var PRODUCTS = [
 class FilterTable extends React.Component {
 	constructor(props) {
 		super(props)
+
+		this.state = {
+			filterText: ''
+		};
+
+		this.handleFilterTextChanged = this.handleFilterTextChanged.bind(this);
 	}
+
+	handleFilterTextChanged(text){
+		this.setState({
+			filterText: text
+		});
+	}
+
 	render() {
 		return (
 			<StyleDiv>
-				<SearchBar products= {PRODUCTS}/>
-				<ProductsTable products= {PRODUCTS}/>
+				<SearchBar products= {PRODUCTS} onFilterTextChanged={this.handleFilterTextChanged}/>
+				<ProductsTable
+				products= {PRODUCTS}
+				filterText={this.state.filterText}/>
 			</StyleDiv>
 		);
 	}

@@ -10,20 +10,27 @@ const Styletable = styled.table`
 `;
 
 class ProductsTable extends React.Component {
-	constructor(props) {
-		super(props)
-		console.log("chris", this.props.products);
-
-	}
 	render() {
 		var items = [];
 		this.props.products.forEach((product) => {
-			items.push(<ProductRow product={product}/>)
+			if(product.name.indexOf(this.props.filterText) === -1){
+				return;
+			}
+			items.push(<ProductRow product={product} key={product.name}/>);
 		});
 
 		return (
 			<Styletable>
-				{items}
+				<thead>
+					 <tr>
+						 <th>Name</th>
+						 <th>Price</th>
+						 <th>stocked</th>
+					 </tr>
+				 </thead>
+				 <tbody>
+				 	{items}
+				 </tbody>
 			</Styletable>
 		);
 	}
