@@ -11,9 +11,13 @@ const Styletable = styled.table`
 
 class ProductsTable extends React.Component {
 	render() {
+		console.log("isStock", this.props.isStock);
+
 		var items = [];
 		this.props.products.forEach((product) => {
-			if(product.name.indexOf(this.props.filterText) === -1){
+			console.log("stocked", product.stocked);
+			if(product.name.indexOf(this.props.filterText) === -1 &&
+				 (product.stocked == this.props.isStock)){
 				return;
 			}
 			items.push(<ProductRow product={product} key={product.name}/>);

@@ -27,10 +27,12 @@ class FilterTable extends React.Component {
 		super(props)
 
 		this.state = {
-			filterText: ''
+			filterText: '',
+			inStockOnly: false
 		};
 
 		this.handleFilterTextChanged = this.handleFilterTextChanged.bind(this);
+		this.handleShowStock = this.handleShowStock.bind(this);
 	}
 
 	handleFilterTextChanged(text){
@@ -39,13 +41,22 @@ class FilterTable extends React.Component {
 		});
 	}
 
+	handleShowStock(isStock){
+		this.setState({
+			inStockOnly: isStock
+		});
+	}
+
 	render() {
 		return (
 			<StyleDiv>
-				<SearchBar products= {PRODUCTS} onFilterTextChanged={this.handleFilterTextChanged}/>
+				<SearchBar products= {PRODUCTS}
+				onFilterTextChanged={this.handleFilterTextChanged}/>
 				<ProductsTable
 				products= {PRODUCTS}
-				filterText={this.state.filterText}/>
+				filterText={this.state.filterText}
+				isStock={this.state.inStockOnly}
+				onHandleShowStock={this.handleShowStock}/>
 			</StyleDiv>
 		);
 	}
