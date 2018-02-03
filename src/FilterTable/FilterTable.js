@@ -51,12 +51,13 @@ class FilterTable extends React.Component {
 		return (
 			<StyleDiv>
 				<SearchBar products= {PRODUCTS}
-				onFilterTextChanged={this.handleFilterTextChanged}/>
+				onFilterTextChanged={this.handleFilterTextChanged}
+				onHandleShowStock={this.handleShowStock}/>
+
 				<ProductsTable
 				products= {PRODUCTS}
 				filterText={this.state.filterText}
-				isStock={this.state.inStockOnly}
-				onHandleShowStock={this.handleShowStock}/>
+				isStock={this.state.inStockOnly}/>
 			</StyleDiv>
 		);
 	}
