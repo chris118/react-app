@@ -4,8 +4,8 @@ import SearchBar from './SearchBar';
 import ProductsTable from './ProductsTable';
 
 const StyleDiv = styled.div`
-	background: #ccf;
-	border: 3px solid yellow;
+	background: #C8C8C8;
+	border: 3px solid grey;
 	height: auto;
 	width: 300px;
 	display: inline-block;

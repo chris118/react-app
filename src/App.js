@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 import Clock from './Clock';
 import Toggle from './Toggle';
+import Popper from './Popper';
 import LoginControl from './LoginControl';
 import Warning from './Warning';
 import Blogs from './Blogs';
@@ -11,6 +12,7 @@ import NameForm from './NameForm';
 import EssayForm from './EssayForm';
 import FlavorForm from './FlavorForm';
 import Reservation from './Reservation';
+import NameForm2 from './NameForm2';
 import Calculator from './Calculator';
 import SignUpDialog from './SignUpDialog';
 import FilterTable from './FilterTable/FilterTable';
@@ -20,25 +22,28 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo"/>
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <hr/>
 
-         <Clock />
-         <Toggle />
-         <LoginControl />
-         <Warning />
-         <Blogs />
-         <NameForm />
-         <EssayForm />
-         <FlavorForm />
-         <Reservation />
-         <Calculator />
-         <SignUpDialog />
-         <FilterTable />
+        <Clock/>
+        <Toggle/>
+        <Popper/>
+        <LoginControl/>
+        <Warning/>
+        <Blogs/>
+        <NameForm/>
+        <EssayForm/>
+        <FlavorForm/>
+        <Reservation/>
+        <NameForm2/>
+        <Calculator/>
+        <SignUpDialog/>
+        <FilterTable/>
       </div>
     );
   }

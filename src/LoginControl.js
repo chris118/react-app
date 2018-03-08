@@ -11,9 +11,9 @@ function GuestGreeting(props) {
 function Greeting(props) {
   const isLoggedIn = props.isLoggedIn;
   if (isLoggedIn) {
-    return <UserGreeting />;
+    return <UserGreeting/>;
   }
-  return <GuestGreeting />;
+  return <GuestGreeting/>;
 }
 
 function LoginButton(props) {
@@ -53,14 +53,15 @@ class LoginControl extends React.Component {
 
     let button = null;
     if (isLoggedIn) {
-      button = <LogoutButton onClick={this.handleLogoutClick} />;
+      button = <LogoutButton onClick={this.handleLogoutClick}/>;
     } else {
-      button = <LoginButton onClick={this.handleLoginClick} />;
+      button = <LoginButton onClick={this.handleLoginClick}/>;
     }
 
     return (
-      <div>
-        <Greeting isLoggedIn={isLoggedIn} />
+      <div class='group-div'>
+        <p>LoginControl: 条件渲染</p>
+        <Greeting isLoggedIn={isLoggedIn}/>
         {button}
       </div>
     );

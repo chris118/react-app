@@ -27,7 +27,8 @@ class Warning extends React.Component {
 
   render() {
     return (
-      <div>
+       <div class='group-div'>
+         <p>WarningBanner: 阻止组件渲染</p>
         <WarningBanner warn={this.state.showWarning} />
         <button onClick={this.handleToggleClick}>
           {this.state.showWarning ? 'Hide' : 'Show'}

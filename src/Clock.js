@@ -25,7 +25,8 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class='group-div'>
+        <p>Clock</p>
         <h1>Hello, world!</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
       </div>

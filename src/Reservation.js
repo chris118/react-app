@@ -7,8 +7,13 @@ class Reservation extends React.Component {
       isGoing: true,
       numberOfGuests: 2
     };
-
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleSubmit(event) {
+    alert('isGoing: ' + this.state.isGoing + "  " + "numberOfGuests: " + this.state.numberOfGuests);
+    event.preventDefault();
   }
 
   handleInputChange(event) {
@@ -23,25 +28,30 @@ class Reservation extends React.Component {
 
   render() {
     return (
-      <form>
-        <label>
-          Is going:
-          <input
-            name="isGoing"
-            type="checkbox"
-            checked={this.state.isGoing}
-            onChange={this.handleInputChange} />
-        </label>
-        <br />
-        <label>
-          Number of guests:
-          <input
-            name="numberOfGuests"
-            type="number"
-            value={this.state.numberOfGuests}
-            onChange={this.handleInputChange} />
-        </label>
-      </form>
+      <div class='group-div'>
+        <p>Reservation: 受控组件4</p>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Is going:
+            <input
+              name="isGoing"
+              type="checkbox"
+              checked={this.state.isGoing}
+              onChange={this.handleInputChange}/>
+          </label>
+          <br/>
+          <label>
+            Number of guests:
+            <input
+              name="numberOfGuests"
+              type="number"
+              value={this.state.numberOfGuests}
+              onChange={this.handleInputChange}/>
+          </label>
+          <br/>
+          <input type="submit" value="Submit"/>
+        </form>
+      </div>
     );
   }
 }

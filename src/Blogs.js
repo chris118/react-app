@@ -1,12 +1,11 @@
 import React from 'react';
 
 
-
 function Blogs(props) {
   const posts = [
-  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
-];
+    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+  ];
 
   const sidebar = (
     <ul>
@@ -24,9 +23,9 @@ function Blogs(props) {
     </div>
   );
   return (
-    <div>
+    <div class='group-div'>
+      <p>Blogs: 列表 & Keys</p>
       {sidebar}
-      <hr />
       {content}
     </div>
   );

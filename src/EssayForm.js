@@ -22,17 +22,19 @@ class EssayForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <textarea value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <div class='group-div'>
+        <p>EssayForm: 受控组件2</p>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Name:
+            <textarea value={this.state.value} onChange={this.handleChange}/>
+          </label>
+          <input type="submit" value="Submit"/>
+        </form>
+      </div>
     );
   }
 }
-
 
 
 export default EssayForm;

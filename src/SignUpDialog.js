@@ -3,14 +3,15 @@ import styled from 'styled-components';
 
 const FancyBorder = styled.div`
 	padding: 10px 10px;
-	margin: 10px 10px;
-	border: 10px solid;
+	margin:0 auto;
+  width: 300px;
+	border: 2px solid;
 	border-color: ${props => props.color};
 `;
 
 function Dialog(props) {
   return (
-    <FancyBorder color="red">
+    <FancyBorder color="grey">
       <h1 className="Dialog-title">
         {props.title}
       </h1>
@@ -32,14 +33,17 @@ class SignUpDialog extends React.Component {
 
   render() {
     return (
-      <Dialog title="Mars Exploration Program"
-              message="How should we refer to you?">
-        <input value={this.state.login}
-               onChange={this.handleChange} />
-        <button onClick={this.handleSignUp}>
-          Sign Me Up!
-        </button>
-      </Dialog>
+      <div class='group-div'>
+        <p>SignUpDialog: 属性和组合</p>
+        <Dialog title="Mars Exploration Program"
+                message="How should we refer to you?">
+          <input value={this.state.login}
+                 onChange={this.handleChange} />
+          <button onClick={this.handleSignUp}>
+            Sign Me Up!
+          </button>
+        </Dialog>
+      </div>
     );
   }
 

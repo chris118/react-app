@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ProductRow from './ProductRow';
 
 const Styletable = styled.table`
-	background: red;
+	background: #fff;
 	padding: 10px;
 	margin: 20px;
 	display: block;

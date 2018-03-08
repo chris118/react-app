@@ -22,6 +22,15 @@
   font-size: large;
 }
 
+.group-div{
+  border-style: solid;
+  border-top-style:none;
+  border-left-style:none;
+  border-right-style:none;
+  border-bottom-width: 1px;
+  border-color: black;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

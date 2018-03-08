@@ -49,19 +49,20 @@ class Calculator extends React.Component {
     const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
 
     return (
-      <div>
+      <div class='group-div'>
+        <p>Calculator: 状态提升</p>
         <TemperatureInput
           scale="c"
           temperature={celsius}
-          onTemperatureChange={this.handleCelsiusChange} />
+          onTemperatureChange={this.handleCelsiusChange}/>
 
         <TemperatureInput
           scale="f"
           temperature={fahrenheit}
-          onTemperatureChange={this.handleFahrenheitChange} />
+          onTemperatureChange={this.handleFahrenheitChange}/>
 
         <BoilingVerdict
-          celsius={parseFloat(celsius)} />
+          celsius={parseFloat(celsius)}/>
 
       </div>
     );

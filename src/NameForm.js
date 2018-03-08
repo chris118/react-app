@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
@@ -21,13 +20,16 @@ class NameForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <div class='group-div'>
+        <p>NameForm: 受控组件1</p>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Name:
+            <input type="text" value={this.state.value} onChange={this.handleChange}/>
+          </label>
+          <input type="submit" value="Submit"/>
+        </form>
+      </div>
     );
   }
 }

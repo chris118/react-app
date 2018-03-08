@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 
 class Toggle extends React.Component {
   constructor(props) {
@@ -17,9 +17,12 @@ class Toggle extends React.Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>
-        {this.state.isToggleOn ? 'ON' : 'OFF'}
-      </button>
+      <div class='group-div'>
+        <p>Toggle</p>
+        <button onClick={this.handleClick}>
+          {this.state.isToggleOn ? 'ON' : 'OFF'}
+        </button>
+      </div>
     );
   }
 }

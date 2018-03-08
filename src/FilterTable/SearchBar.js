@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyleForm = styled.form`
-	background: red;
+	background: #fff;
 	padding: 10px;
 	margin: 20px;
 `;
