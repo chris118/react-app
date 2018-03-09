@@ -12,7 +12,7 @@ class Reservation extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('isGoing: ' + this.state.isGoing + "  " + "numberOfGuests: " + this.state.numberOfGuests);
+    alert('isGoing: '.concat(this.state.isGoing).concat('  ').concat('numberOfGuests: ').concat(this.state.numberOfGuests));
     event.preventDefault();
   }
 
