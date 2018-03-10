@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Demo from './Demo';
+
 import Clock from './Clock';
 import Toggle from './Toggle';
 import Popper from './Popper';
@@ -17,6 +17,9 @@ import NameForm2 from './NameForm2';
 import Calculator from './Calculator';
 import SignUpDialog from './SignUpDialog';
 import FilterTable from './FilterTable/FilterTable';
+import Demo from './Demo';
+import Demo2 from './Demo2';
+
 
 class App extends Component {
   render() {
@@ -31,7 +34,7 @@ class App extends Component {
         {/*</p>*/}
         {/*<hr/>*/}
 
-        <Demo/>
+
         {/*<Clock/>*/}
         {/*<Toggle/>*/}
         {/*<Popper/>*/}
@@ -46,6 +49,8 @@ class App extends Component {
         {/*<Calculator/>*/}
         {/*<SignUpDialog/>*/}
         {/*<FilterTable/>*/}
+        <Demo/>
+        <Demo2 messages={[{text: '111'},{text:'222'}]}/>
       </div>
     );
   }
