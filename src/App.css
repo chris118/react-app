@@ -1,6 +1,10 @@
-.App {
-  display: flex;
-  flex-direction: column;
+.content {
   text-align: center;
+  background-color: rosybrown;
+}
+
+.link {
+  width: 100px;
+  padding: 10px;
 }
 
